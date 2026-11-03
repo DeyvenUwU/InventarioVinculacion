@@ -1,0 +1,79 @@
+
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block titulo %}Iniciar sesión{% endblock %}
+
+{% block estilos %}
+<link rel="stylesheet" href="{% static 'css/login.css' %}">
+{% endblock %}
+
+{% block contenido %}
+<div class="contenedorLogin">
+    <form method="post" class="formularioLogin">
+
+        {% csrf_token %}
+
+        <h2>Iniciar sesión</h2>
+        <p class="descripcion">Ingresa tus datos para acceder</p>
+
+        {% if form.errors %}
+            <p class="mensajeError">El usuario y/ó la contraseña son incorrectos.</p>
+        {% endif %}
+
+        <div class="campo">
+            <label for="id_username">Usuario</label>
+            <div class="entradaConIcono">
+                <span class="iconoCampo" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" focusable="false">
+                        <path d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8Zm0 2c-4.42 0-8 2.24-8 5v1h16v-1c0-2.76-3.58-5-8-5Z"/>
+                    </svg>
+                </span>
+                <input
+                    type="text"
+                    name="username"
+                    id="id_username"
+                    placeholder="Ingresa tu usuario"
+                    autocomplete="username"
+                    required>
+            </div>
+        </div>
+
+        <div class="campo">
+            <label for="id_password">Contraseña</label>
+            <div class="entradaConIcono">
+                <span class="iconoCampo" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" focusable="false">
+                        <path d="M17 8h-1V6a4 4 0 0 0-8 0v2H7a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-8a2 2 0 0 0-2-2Zm-7-2a2 2 0 0 1 4 0v2h-4V6Zm5 10H9v-2h6v2Z"/>
+                    </svg>
+                </span>
+                <input
+                    type="password"
+                    name="password"
+                    id="id_password"
+                    placeholder="Ingresa tu contraseña"
+                    autocomplete="current-password"
+                    required>
+            </div>
+            <label class="opcionMostrarPassword" for="mostrar-password">
+                <span>Mostrar contraseña</span>
+                <input type="checkbox" id="mostrar-password">
+            </label>
+        </div>
+
+        <button type="submit">Iniciar sesión</button>
+
+    </form>
+
+</div>
+
+<script>
+    const mostrarPassword = document.querySelector("#mostrar-password");
+    const campoPassword = document.querySelector("#id_password");
+
+    mostrarPassword.addEventListener("change", () => {
+        campoPassword.type = mostrarPassword.checked ? "text" : "password";
+    });
+</script>
+{% endblock %}

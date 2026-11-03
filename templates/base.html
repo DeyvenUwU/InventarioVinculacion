@@ -1,0 +1,44 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>{% block titulo %}{% endblock %}</title>
+
+    <link rel="stylesheet" href="{% static 'css/global.css' %}">
+    {% block estilos %}{% endblock %}
+</head>
+
+<body>
+    <div class="contenido">
+
+        <div class="barraSuperior">
+            <img
+                    class="logo-tecnm"
+                    src="{% static 'img/logotecnm.png' %}"
+                    alt="Tecnológico Nacional de México">
+
+            <h1>Gestor de inventario - Vinculación</h1>
+            
+            <div class="logos-institucionales">
+                <img
+                    class="logo-itsur"
+                    src="{% static 'img/logoitsur.png' %}"
+                    alt="Instituto Tecnológico Superior de Urireo">
+
+                <h3>TecNM Campus Sur de Guanajuato</h3>
+            </div>
+        </div>
+
+        <div>
+            {% block contenido %}{% endblock %}
+        </div>
+
+    </div>
+</body>
+
+</html>

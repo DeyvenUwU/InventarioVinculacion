@@ -1,0 +1,84 @@
+.contenido2 {
+    height: 100%;
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: 18% 1fr;
+}
+
+.panel1 {
+    background: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.10);
+}
+
+.panel2 {
+    background: #f4f6f8;
+}
+
+.optionContainer {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.optionContainer h1 {
+    font-size: 1.3rem;
+    font-weight: bold;
+    padding: 0px 20px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    color: #a0a0a0;
+}
+
+.menuOpcion {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 1.1rem;
+    padding: 10px 30px;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
+    height: 50px;
+}
+
+.menuOpcion:hover {
+    background-color: #cccccc;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+}
+
+.menuOpcion:hover .iconoMenu {
+    color: currentColor;
+}
+
+.iconoMenu {
+    display: inline-flex;
+    flex: 0 0 20px;
+    align-items: center;
+    justify-content: center;
+    color: #68717d;
+}
+
+.iconoMenu svg {
+    width: 32px;
+    height: 32px;
+    fill: currentColor;
+}
+
+.logoutForm {
+    margin: 0;
+}
+
+.logoutForm .menuOpcion {
+    width: 100%;
+    border: 0;
+    background: transparent;
+    color: inherit;
+    font: inherit;
+    text-align: left;
+    appearance: none;
+}

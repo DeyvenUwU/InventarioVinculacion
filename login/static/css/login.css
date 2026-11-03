@@ -1,0 +1,135 @@
+.contenedorLogin {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.formularioLogin {
+    width: 100%;
+    max-width: 420px;
+
+    background: white;
+    padding: 35px;
+
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.10);
+}
+
+.formularioLogin h2 {
+    text-align: center;
+    margin-bottom: 10px;
+    color: #2A3C68;
+    font-size: 2rem;
+}
+
+.descripcion {
+    text-align: center;
+    color: #6b7280;
+    margin-bottom: 25px;
+    font-size: 1rem;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.campo label {
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.entradaConIcono {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background: white;
+    border: 1px solid #c4c4c4;
+    border-radius: 6px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.entradaConIcono:focus-within {
+    border-color: #2A3C68;
+    box-shadow: 0 0 0 2px rgba(42, 60, 104, 0.2);
+}
+
+.iconoCampo {
+    width: 38px;
+    display: flex;
+    justify-content: center;
+    color: #68717d;
+}
+
+.iconoCampo svg {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+}
+
+.entradaConIcono input {
+    min-width: 0;
+    flex: 1;
+    padding: 12px 12px 12px 0;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 1rem;
+    padding-left: 10px;
+}
+
+.entradaConIcono input::placeholder {
+    color: #737b85;
+    opacity: 1;
+}
+
+.campo .opcionMostrarPassword {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    gap: 8px;
+    margin-top: 10px;
+    color: #6b7280;
+    font-size: 0.9rem;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+.opcionMostrarPassword input {
+    width: 15px;
+    height: 15px;
+    accent-color: #2A3C68;
+    cursor: pointer;
+}
+
+.formularioLogin button {
+    width: 100%;
+    padding: 12px;
+
+    border: none;
+    border-radius: 6px;
+
+    background: #2A3C68;
+    color: white;
+
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 40px;
+}
+
+.formularioLogin button:hover {
+    background: #1d2b4d;
+}
+
+.mensajeError {
+    color: #8b4b4b;
+    background: #fee2e2;
+    padding: 10px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+}
